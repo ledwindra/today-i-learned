@@ -24,5 +24,4 @@ b'YnV0IHlvdSBoYXZlIHRvIGRlY29kZSBpdA=='
 ```
 
 [and then ...](https://twitter.com/ledwindra/status/1287697628268879877)
-
-
+![i-have-an-encoded-joke](img/i-have-an-encoded-joke.png)
