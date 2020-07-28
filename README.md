@@ -4,7 +4,7 @@ A list of my daily lessons. I don't set high expectations here. My rationale is 
 ## Before 2020
 Skipped.
 
-# 2020 - July 1 - 26
+# 2020: January 1 - July 26
 It's been a rough year, isn't it? Anyway, skipped
 
 ## July 27, 2020
