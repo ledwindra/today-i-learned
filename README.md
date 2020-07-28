@@ -28,7 +28,7 @@ In addition, I managed to changed the default branch from existing project such 
 
 Following is the snippet from the command line:
 
-```
+```bash
 ledwindra@R90SEMHV:~/today-i-learned$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -37,8 +37,21 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
         modified:   README.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
+ledwindra@R90SEMHV:~/today-i-learned$ git add README.md 
+ledwindra@R90SEMHV:~/today-i-learned$ git commit -m "Today I learned"
+[main e1f5f04] Today I learned
+ 1 file changed, 25 insertions(+), 8 deletions(-)
+ledwindra@R90SEMHV:~/today-i-learned$ git push origin main
+Username for 'https://github.com': ledwindra
+Password for 'https://ledwindra@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.42 KiB | 485.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ledwindra/today-i-learned.git
+   d371988..e1f5f04  main -> main
 ```
 
 
