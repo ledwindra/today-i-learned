@@ -22,9 +22,11 @@ b'YnV0IHlvdSBoYXZlIHRvIGRlY29kZSBpdA=='
 ![i-have-an-encoded-joke](img/i-have-an-encoded-joke.png)
 
 ## July 28, 2020
+
+### git latest version now allows us to get rid of `master` branch
 Today I learned how to initiate `main` as a default branch on git! This article from [`GitHub`](https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch) helps me from updating git to version 2.28 to [creating a new repository](https://github.com/ledwindra/change-main-branch) with `main` branch, instead of `master`.
 
-In addition, I managed to changed the default branch from existing project such as this repository  to `main`. [This article](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx) [and this StackOverflow post](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely) help me to make this happen. A small step worth doing indeed!
+In addition, I managed to changed the default branch from existing project such as this repository  to `main`. [This article](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx) and [this StackOverflow post](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely) help me to make this happen. A small step worth doing indeed!
 
 Following is the snippet from the command line:
 
@@ -54,4 +56,21 @@ To https://github.com/ledwindra/today-i-learned.git
    d371988..e1f5f04  main -> main
 ```
 
+### a conservative anarchist with a beautiful job description
+Besides, today I learned about [Audrey Tang](https://en.wikipedia.org/wiki/Audrey_Tang),
+Taiwan's Digital Minister, who's also--according to Wikipedia--the first transgender official in the top executive cabinet. This afternoon while I was doing my work, I saw [this tweet](https://twitter.com/hardmaru/status/1288009848102113280), which basically tells Audrey is a well known hacker in
+the Haskell and Perl communities.
+
+Later I dig deeper about her, from [this article](https://twitter.com/hardmaru/status/1288009848102113280) (also from that tweet). It's totally a worth
+read on how she and the Taiwanese government handled the COVID-19 pandemic so well.
+"She's really fantastic", my mind said. Then I surfed to her [talk](https://www.youtube.com/watch?v=LscTx6DHh9I) and [interview](https://www.youtube.com/watch?v=IZ2N3tF4W_k).
+
+What's really fascinating about her is not only that she's technically brilliant,
+but she also shows us that being a prodigy doesn't necessarily mean she loses her
+human touch. Basically she's not a typical brilliant asshole which is ubiquitous
+in the tech scene and also how popular culture depicts it (like Elon Musk or Mark Zuckerberg). As a closing remark for today's session, I below quote her job description, which is totally beautiful:
+
+![audrey-tang-job-desc](img/audrey-tang-job-desc.png)
+
+From today, I declare that I'm her fan. 🥰
 
