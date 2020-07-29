@@ -67,3 +67,5 @@ What's really fascinating about her is not only that she's technically savvy, bu
 
 From today, I declare that I'm her fan. 🥰
 
+## July 29, 2020
+I don't think I learned something new today. Mostly I was just continue watching and reading stuffs about Audrey Tang (both related to his work as a minister and his effort in [Raku](https://raku.org/) development). Besides, I started reading [Break 'em Up](https://www.goodreads.com/book/show/51176626-break-em-up), which I find quite interesting. Nothing particular from the it that caught my attention so far, but will update a snippet here if it does.
