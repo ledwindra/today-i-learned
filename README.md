@@ -69,3 +69,37 @@ From today, I declare that I'm her fan. 🥰
 
 ## July 29, 2020
 I don't think I learned something new today. Mostly I was just continue watching and reading stuffs about Audrey Tang (both related to his work as a minister and his effort in [Raku](https://raku.org/) development). Besides, I started reading [Break 'em Up](https://www.goodreads.com/book/show/51176626-break-em-up), which I find quite interesting. Nothing particular from the it that caught my attention so far, but will update a snippet here if it does.
+
+## July 30, 2020
+Today I learned how to make a progress bar using Python. So that when I run the program, it will appear on the console. Not only that, I tried to modify it so that it resembles a drum roll 😎. Check this out:
+
+![progress-bar](img/progress-bar.gif)
+
+This [StackOverflow post](https://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console) helps to walk through the process, though I didn't copy and paste it thoroughly 🙏🏽. The code snippet is as follows:
+
+```python
+def problem_one(self, n=1000, interval=0.001, dash='-', equal='='):
+    """
+    If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+    """
+    # set initial numbers
+    i = 0
+    answer = 0
+    # as long as i is below N (10, 1000, etc)
+    # if it's divisible by 3 or 5
+    # add that number with the answer
+    while i < n:
+        progress = int((i / n) * 101)
+        progress_dash = dash * int((100 - progress) / 2)
+        progress_equal = equal * int(progress / 2)
+        print(f'Progress: |{progress_equal}{progress_dash}| {progress}%', end='\r')
+        if i % 3 == 0 or i % 5 == 0:
+            answer += i
+        i += 1
+        sleep(interval)
+    print("\n")
+    
+    return answer
+```
+
+ Oh, you can also see my [<strong>`Project Euler`</strong>](https://github.com/ledwindra/project-euler) repository too! The unit tests in the repository still don't include the progress bar, though. 😄
