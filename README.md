@@ -103,3 +103,6 @@ def problem_one(self, n=1000, interval=0.001, dash='-', equal='='):
 ```
 
  Oh, you can also see my [<strong>`Project Euler`</strong>](https://github.com/ledwindra/project-euler) repository too! The unit tests in the repository still don't include the progress bar, though. 😄
+ 
+ ## July 31, 2020
+I learned nothing particular today but apparently I'm enjoying [<strong>`New Girls (TV series)`</strong>](https://en.wikipedia.org/wiki/New_Girl)(available on Netflix). Today I just finished its first (out of seven) season.
