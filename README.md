@@ -106,3 +106,20 @@ def problem_one(self, n=1000, interval=0.001, dash='-', equal='='):
  
  ## July 31, 2020
 I learned nothing particular today but apparently I'm enjoying [<strong>`New Girls (TV series)`</strong>](https://en.wikipedia.org/wiki/New_Girl)(available on Netflix). Today I just finished its first (out of seven) season.
+
+Alright, alright, here's another one. Today I learned that in Python, a list of tuples can be converted to dictionary, which I find it useful to solve a certain problem, for example [<strong>`this Project Euler problem`</strong>](https://projecteuler.net/problem=22)
+
+```python
+>>> import string # it's built-in module, no need to pip install
+>>> alphabet = [x for x in string.ascii_uppercase] # can be lowercase too
+>>> alphabet
+['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+>>> alphabet = [(alphabet[x], alphabet[x].replace(alphabet[x], str(x+1))) for x in range(len(alphabet))] # a list of tuples
+>>> alphabet
+[('A', '1'), ('B', '2'), ('C', '3'), ('D', '4'), ('E', '5'), ('F', '6'), ('G', '7'), ('H', '8'), ('I', '9'), ('J', '10'), ('K', '11'), ('L', '12'), ('M', '13'), ('N', '14'), ('O', '15'), ('P', '16'), ('Q', '17'), ('R', '18'), ('S', '19'), ('T', '20'), ('U', '21'), ('V', '22'), ('W', '23'), ('X', '24'), ('Y', '25'), ('Z', '26')]
+>>> alphabet = dict(alphabet) # convert to a dictionary in just one nice line
+>>> alphabet
+{'A': '1', 'B': '2', 'C': '3', 'D': '4', 'E': '5', 'F': '6', 'G': '7', 'H': '8', 'I': '9', 'J': '10', 'K': '11', 'L': '12', 'M': '13', 'N': '14', 'O': '15', 'P': '16', 'Q': '17', 'R': '18', 'S': '19', 'T': '20', 'U': '21', 'V': '22', 'W': '23', 'X': '24', 'Y': '25', 'Z': '26'}
+```
+
+For what it's worth, I think this can be handy in many situations :smile:
