@@ -125,4 +125,23 @@ Alright, alright, here's another one. Today I learned that in Python, a list of 
 For what it's worth, I think this can be handy in many situations :smile:
 
 ## August 1, 2020
+
+### a little bit of romcom
 Whoa, we're now entering the 8th month already 😱! Anyway, today I learned that at the end of [<strong>`New Girl`</strong>](https://en.wikipedia.org/wiki/New_Girl)'s first season, there's the scene which has the Clash [<strong>`Death or Glory`</strong>](https://en.wikipedia.org/wiki/Death_or_Glory_(song)) as its background song. Then I'm reminded that in another movie where [<strong>`Zooey Deschanel`</strong>](https://en.wikipedia.org/wiki/Zooey_Deschanel) plays a big role, [<strong>`(500) Days of Summer`</strong>](https://en.wikipedia.org/wiki/500_Days_of_Summer), there's a scene where another the Clash song, [<strong>`Train in Vain`</strong>](https://en.wikipedia.org/wiki/Train_in_Vain) was sung by [<strong>`Joseph Gordon-Levitt`</strong>](https://en.wikipedia.org/wiki/Joseph_Gordon-Levitt). See the clip [here](https://www.youtube.com/watch?v=aGOhU2LLUt0).
+
+### permutations made simple
+Today I also learned how make a permutation given a value in Python in a simple way. I think performing such task is not going to be frequent in my day-to-day job, but it's really good to know that it's this easy. This [<strong>`StackOverflow`</strong>](https://stackoverflow.com/questions/104420/how-to-generate-all-permutations-of-a-list#104436) post helps me to walk through the problem. Here's the snippet:
+
+```python
+>>> import itertools # this built-in module is awesome!
+>>> import string
+>>> digit = string.digits
+>>> digit
+'0123456789' # a given value
+>>> permutation = list(itertools.permutations(digit, len(digit))) # make permutation of the given value, each has length of it (in this case 10)
+>>> permutation[:5]
+[('0', '1', '2', '3', '4', '5', '6', '7', '8', '9'), ('0', '1', '2', '3', '4', '5', '6', '7', '9', '8'), ('0', '1', '2', '3', '4', '5', '6', '8', '7', '9'), ('0', '1', '2', '3', '4', '5', '6', '8', '9', '7'), ('0', '1', '2', '3', '4', '5', '6', '9', '7', '8')]
+>>> # complete list will be longer to print
+```
+
+This method helps me to solve [<strong>`43rd's Project Euler problem`</strong>](https://projecteuler.net/problem=43). 
