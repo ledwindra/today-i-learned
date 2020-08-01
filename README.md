@@ -123,3 +123,6 @@ Alright, alright, here's another one. Today I learned that in Python, a list of 
 ```
 
 For what it's worth, I think this can be handy in many situations :smile:
+
+## August 1, 2020
+Whoa, we're now entering the 8th month already 😱! Anyway, today I learned that at the end of [<strong>`New Girl`</strong>](https://en.wikipedia.org/wiki/New_Girl)'s first season, there's the scene which has the Clash [<strong>`Death or Glory`</strong>](https://en.wikipedia.org/wiki/Death_or_Glory_(song)) as its background song. Then I'm reminded that in another movie where [<strong>`Zooey Deschanel`</strong>](https://en.wikipedia.org/wiki/Zooey_Deschanel) plays a big role, [<strong>`(500) Days of Summer`</strong>](https://en.wikipedia.org/wiki/500_Days_of_Summer), there's a scene where another the Clash song, [<strong>`Train in Vain`</strong>](https://en.wikipedia.org/wiki/Train_in_Vain) was sung by [<strong>`Joseph Gordon-Levitt`</strong>](https://en.wikipedia.org/wiki/Joseph_Gordon-Levitt). See the clip [here](https://www.youtube.com/watch?v=aGOhU2LLUt0).
