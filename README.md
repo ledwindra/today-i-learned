@@ -145,3 +145,33 @@ Today I also learned how make a permutation given a value in Python in a simple 
 ```
 
 This method helps me to solve [<strong>`43rd's Project Euler problem`</strong>](https://projecteuler.net/problem=43). 
+
+## August 2, 2020
+Today I learned that writing mathematical notation without installing and compiling LaTeX can just be easily done using Jupyter in markdown mode. For example consider the following [<strong>`Project Euler problem`</strong>](https://projecteuler.net/problem=27):
+
+```
+Euler discovered the remarkable quadratic formula:
+
+$$n^2 + n + 41$$
+
+It turns out that the formula will produce 40 primes for the consecutive integer values $0 \leq n \leq 39$. However, when is divisible by 41, and certainly when $n = 40, 40^2 + 40 + 41 = 40(40 + 1) + 41$ is clearly divisible by 41.
+
+The incredible formula $n^2 - 79n + 1601$ was discovered, which produces 80 primes for the consecutive values $0 \leq n \leq 79$. The product of the coefficients, −79 and 1601, is −126479.
+
+Considering quadratics of the form:
+
+$n^2 + an + b$, where $|a| \lt 1000$ and $|b| \leq 1000$
+
+where $|n|$ is the modulus/absolute value of $n$ <br>
+e.g. $|11| = 11$ and $|-4| = 4$
+
+Find the product of the coefficients, $a$ and $b$ for the quadratic expression that produces the maximum number of primes for consecutive values of $n$, starting with $n = 0$.
+```
+
+However it's not rendered in this document. See below when I tried doing it on Jupyter:
+
+![jupyter-latex](img/jupyter-latex.png)
+
+Then so what? For me, it's really awesome if some serious documents such as academic papers which have numerous mathematical formula can just be written inside Jupyter, including the graphs, tables, and of course codes! Not only we have to compile something for a document (which can be tiresome), it can also be shared online so easily and more readable (which are totally important for general readers).
+
+Future me or other readers might want to see that presentations can be done in Jupyter and hosted on GitHub such as [this](https://ledwindra.github.io/pendidikan-papua/#/) (made by me, but not totally a serious stuff). :smile:
