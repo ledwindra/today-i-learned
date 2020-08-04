@@ -4,3 +4,7 @@ This is my blog page where I post daily lessons (or abbreviated as [<strong>`#TI
 <p align="center">
   <img width="1000" height="600" src="https://media.giphy.com/media/SSirUu2TrV65ymCi4J/giphy.gif">
 </p>
+
+
+# Note
+I find it convenient reading it from desktop as the scroll doesn't seem to work fine on mobile. If in any case someone wants to read it on mobile, just open the [<strong>index.ipynb</strong>](https://github.com/ledwindra/nber/runs/944566116?check_suite_focus=true).
