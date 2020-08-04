@@ -13391,6 +13391,64 @@ Find the product of the coefficients, $a$ and $b$ for the quadratic expression t
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="August-4,-2020">August 4, 2020<a class="anchor-link" href="#August-4,-2020">&#182;</a></h2><h3 id="a-deeper-look-of-GitHub-actions">a deeper look of GitHub actions<a class="anchor-link" href="#a-deeper-look-of-GitHub-actions">&#182;</a></h3><p>Today I learned something very practical and I feel it very useful in my everyday job: automating jobs using GitHub actions. I've been doing it several times mainly for unit testing, but today I found it can be used way more than that! Like how? Suppose I have scheduled job at certain times where mostly I'm not logged on, and suppose each job makes changes to the repository. How can we automate that job and push to the repository? YES! <a href="https://github.com/features/actions"><strong>GitHub actions</strong></a>!</p>
+<p>There are several links that I could throw upon here which help me get through it, but mainly <a href="https://docs.github.com/en/actions/getting-started-with-github-actions"><strong>the official documentation</strong></a> and <a href="https://github.com/actions/checkout"><strong>the official repository</strong></a> are really helpful!</p>
+<p><img width="500" height="500" src="https://media.giphy.com/media/gtzIP3mpbzh16/giphy.gif"></p>
+<p>One important thing that we need to pay attention to is the <a href="https://en.wikipedia.org/wiki/YAML"><strong>YAML</strong></a> file as it can be tricky. Here's one example of mine for my <a href=""><strong>NBER</strong></a> project:</p>
+<div class="highlight"><pre><span></span><span class="c1"># name of the actions is build (can be anything)</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">build</span>
+
+<span class="c1"># it triggers the action when there&#39;s a push or pull request to master (or any other) branch</span>
+<span class="nt">on</span><span class="p">:</span>
+  <span class="nt">push</span><span class="p">:</span>
+    <span class="nt">branches</span><span class="p">:</span> <span class="p p-Indicator">[</span> <span class="nv">master</span> <span class="p p-Indicator">]</span>
+  <span class="nt">pull_request</span><span class="p">:</span>
+    <span class="nt">branches</span><span class="p">:</span> <span class="p p-Indicator">[</span> <span class="nv">master</span> <span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">build</span><span class="p">:</span>
+
+    <span class="c1"># runs on Ubuntu</span>
+    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+    <span class="c1"># install Python and the dependencies</span>
+    <span class="nt">steps</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up Python 3.8</span>
+      <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+      <span class="nt">with</span><span class="p">:</span>
+        <span class="nt">python-version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3.8</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+      <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+        <span class="no">python -m pip install --upgrade pip</span>
+        <span class="no">if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</span>
+
+    <span class="c1"># runs the main job which is to scrape papers from NBER</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Run script</span>
+      <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+        <span class="no">python src/get_paper.py --initial_id 1 --timeout 10 --sleep 10</span>
+    <span class="c1"># performs unit testing</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Test with pytest</span>
+      <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+        <span class="no">pytest</span>
+        <span class="no"># this is the tricky part</span>
+        <span class="no"># when there are changes, GitHub bot will push to the master (or any other) branch</span>
+        <span class="no"># automatically!</span>
+        <span class="no">git config user.name github-actions</span>
+        <span class="no">git config user.email github-actions@github.com</span>
+        <span class="no">git config --global pull.ff only</span>
+        <span class="no">git add .</span>
+        <span class="no">git commit -m &quot;Hopefully works out&quot;</span>
+        <span class="no">git push</span>
+</pre></div>
+<p>When triggered, we can see the log in real time (how awesome is that!). The sample workflow was successful and can be seen <a href="https://github.com/ledwindra/nber/runs/944536208?check_suite_focus=true"><strong>here</strong></a>. On the other hand, as of this writing, the full automatic scraper still runs <a href="https://github.com/ledwindra/nber/runs/944566116?check_suite_focus=true"><strong>here</strong></a>. I'm not sure for how long it will run, hence fingers crossed! 🤞🏽</p>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
