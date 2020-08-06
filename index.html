@@ -13466,6 +13466,25 @@ Find the product of the coefficients, $a$ and $b$ for the quadratic expression t
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="August-6,-2020">August 6, 2020<a class="anchor-link" href="#August-6,-2020">&#182;</a></h2><h3 id="still-about-GitHub-actions">still about GitHub actions<a class="anchor-link" href="#still-about-GitHub-actions">&#182;</a></h3><p>Today I learned that GitHub actions can be triggered manually. It's really helpful as I don't have to wait until the cron job starts. I've read about this too yesterday but haven't had a chance to implement it straight away 😝. <a href="https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/"><strong>Here's</strong></a> what the documentation says. It's apparently still a relatively new feature! Here's what the YAML example looks like:</p>
+<div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cron-audit-committee</span>
+
+<span class="nt">on</span><span class="p">:</span>
+  <span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="c1"># below, you can just continue the YAML as usual</span>
+</pre></div>
+<h3 id="color-changes-when-activity-increases">color changes when activity increases<a class="anchor-link" href="#color-changes-when-activity-increases">&#182;</a></h3><p>I also learned that the activity color in GitHub can change when by any metric within certain period it increases quite significantly than usual. Here's the comparison between last week and today:</p>
+<h4 id="last-week">last week<a class="anchor-link" href="#last-week">&#182;</a></h4><p><img src="img/old-contribution.png" alt="old-contribution"></p>
+<h4 id="today">today<a class="anchor-link" href="#today">&#182;</a></h4><p><img src="img/new-contribution.png" alt="new-contribution"></p>
+<p>It's almost likely due to the increased activity of my cron jobs 🤣.</p>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
